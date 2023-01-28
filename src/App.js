@@ -116,7 +116,7 @@ function App() {
       return;
     }
   };
-
+  console.log(correctWord);
   return (
     <div className="App font-sans text-white">
       <AppContext.Provider

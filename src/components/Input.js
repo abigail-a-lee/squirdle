@@ -20,7 +20,11 @@ function Input({ inputPos, attempt }) {
 
   const letterCorrect =
     attemptNumber.attempt > attempt &&
-    (green ? "bg-green-500 flip" : yellow ? "bg-yellow-500" : "bg-neutral-800");
+    (green
+      ? "bg-green-500 flip"
+      : yellow
+      ? "bg-yellow-500 flip"
+      : "bg-neutral-800 flip");
 
   useEffect(() => {
     if (input !== "" && !green && !yellow) {

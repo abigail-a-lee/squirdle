@@ -77,9 +77,12 @@
   75% { transform: scale(0.95, 1.05); }
 }
 
+
+
 .flip {
 	backface-visibility: visible !important;
 	animation: flip 1s 1;
+  transition-delay: 700ms;
 }
 @keyframes flip {
 	0% {
