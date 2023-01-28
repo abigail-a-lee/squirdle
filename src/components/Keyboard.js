@@ -48,11 +48,7 @@ function Keyboard() {
         {row1.map((letter) => {
           return (
             <div
-              className={` ${
-                usedLetters.includes(letter)
-                  ? "opacity-20 pointer-events-none"
-                  : ""
-              }`}
+              className={` ${usedLetters.includes(letter) ? "opacity-20" : ""}`}
             >
               <Key keyValue={letter} />
             </div>
@@ -63,11 +59,7 @@ function Keyboard() {
         {row2.map((letter) => {
           return (
             <div
-              className={` ${
-                usedLetters.includes(letter)
-                  ? "opacity-20 pointer-events-none"
-                  : ""
-              }`}
+              className={` ${usedLetters.includes(letter) ? "opacity-20" : ""}`}
             >
               <Key keyValue={letter} />
             </div>
@@ -81,11 +73,7 @@ function Keyboard() {
         {row3.map((letter) => {
           return (
             <div
-              className={` ${
-                usedLetters.includes(letter)
-                  ? "opacity-20 pointer-events-none"
-                  : ""
-              }`}
+              className={` ${usedLetters.includes(letter) ? "opacity-20" : ""}`}
             >
               <Key keyValue={letter} />
             </div>

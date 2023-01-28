@@ -80,7 +80,6 @@ function App() {
 
   const onSelectLetter = (keyValue) => {
     if (attemptNumber.inputPos > 5) return;
-    if (usedLetters.includes(keyValue)) return;
     updateBoard(keyValue);
     updateAttemptNumber(attemptNumber.inputPos + 1);
   };
