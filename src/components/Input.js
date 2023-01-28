@@ -27,7 +27,7 @@ function Input({ inputPos, attempt }) {
       : "bg-neutral-800 flip");
 
   useEffect(() => {
-    if (input !== "" && !green && !yellow) {
+    if (input !== "" && !correctWord.includes(input)) {
       setUsedLetters((prev) => [...prev, input]);
     }
   }, [attemptNumber.attempt]);
