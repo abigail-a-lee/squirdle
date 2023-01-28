@@ -157,7 +157,7 @@ function App() {
             <div>
               <EndGame />
               <button
-                className="my-2 inline-flex w-[110px] bg-sky-900 justify-center rounded-md border border-gray-300  py-1 text-xs shadow-sm hover:bg-sky-800 focus:bg-sky-600 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:text-white"
+                className="my-2 mt-8 inline-flex w-[110px] bg-sky-900 justify-center rounded-md border border-gray-300  py-1 text-xs shadow-sm hover:bg-sky-800 focus:bg-sky-600 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:text-white"
                 onClick={restartGame}
               >
                 Restart
