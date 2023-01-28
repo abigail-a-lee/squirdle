@@ -70,58 +70,85 @@ function GenPicker() {
           {/*   <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
           <span
             class="hover:bg-sky-800 select-none cursor-pointer block px-4 py-2 text-xs"
-            onClick={() => pickGen("all")}
+            onClick={() => {
+              pickGen("all");
+              openMenu();
+            }}
           >
             All
           </span>
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block px-4 py-2 text-xs"
-            onClick={() => pickGen("gen1")}
+            onClick={() => {
+              pickGen("gen1");
+              openMenu();
+            }}
           >
             Gen 1
           </span>
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block px-4 py-2 text-xs"
-            onClick={() => pickGen("gen2")}
+            onClick={() => {
+              pickGen("gen2");
+              openMenu();
+            }}
           >
             Gen 2
           </span>
 
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block w-full px-4 py-2 text-left text-xs"
-            onClick={() => pickGen("gen3")}
+            onClick={() => {
+              pickGen("gen3");
+              openMenu();
+            }}
           >
             Gen 3
           </span>
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block px-4 py-2 text-xs"
-            onClick={() => pickGen("gen4")}
+            onClick={() => {
+              pickGen("gen4");
+              openMenu();
+            }}
           >
             Gen 4
           </span>
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block px-4 py-2 text-xs"
-            onClick={() => pickGen("gen5")}
+            onClick={() => {
+              pickGen("gen5");
+              openMenu();
+            }}
           >
             Gen 5
           </span>
 
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block w-full px-4 py-2 text-left text-xs"
-            onClick={() => pickGen("gen6")}
+            onClick={() => {
+              pickGen("gen6");
+              openMenu();
+            }}
           >
             Gen 6
           </span>
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block px-4 py-2 text-xs"
-            onClick={() => pickGen("gen7")}
+            onClick={() => {
+              pickGen("gen7");
+              openMenu();
+            }}
           >
             Gen 7
           </span>
 
           <span
             class="hover:bg-sky-800 cursor-pointer  select-none block w-full px-4 py-2 text-left text-xs"
-            onClick={() => pickGen("gen8")}
+            onClick={() => {
+              pickGen("gen8");
+              openMenu();
+            }}
           >
             Gen 8
           </span>
