@@ -137,7 +137,7 @@ function App() {
         }}
       >
         <nav>
-          <h1 className="flex-col text-4xl font-bold font-sans text-white my-2 justify-center">
+          <h1 className="flex-col text-4xl select-none font-bold font-sans text-white my-2 justify-center">
             Squirdle
             <div className="flex justify-center">
               <GenPicker />

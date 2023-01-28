@@ -33,7 +33,7 @@ function Input({ inputPos, attempt }) {
   }, [attemptNumber.attempt]);
 
   return (
-    <div className={`input ${letterCorrect}`} ref={box}>
+    <div className={`input select-none ${letterCorrect}`} ref={box}>
       {" "}
       {input}
     </div>
