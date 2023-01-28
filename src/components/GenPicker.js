@@ -2,7 +2,7 @@ import React, { useRef, useState, useContext } from "react";
 import App, { AppContext } from "../App";
 
 function GenPicker() {
-  const { genSelect, setGen } = useContext(AppContext);
+  const { genSelect, setGen, restartGame } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -16,6 +16,7 @@ function GenPicker() {
 
   function pickGen(gen) {
     setGen(gen);
+    restartGame();
   }
 
   return (

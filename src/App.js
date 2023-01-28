@@ -10,6 +10,7 @@ import EndGame from "./components/EndGame";
 export const AppContext = createContext();
 
 function App() {
+  const [gameStart, setGameStart] = useState(true);
   const [board, setBoard] = useState(defaultBoard);
   const [attemptNumber, setAttemptNumber] = useState({
     attempt: 0,
@@ -26,12 +27,38 @@ function App() {
     guessedCorrectly: false,
   });
 
+  const restartGame = () => {
+    {
+      setBoard([
+        ["", "", "", "", "", ""],
+        ["", "", "", "", "", ""],
+        ["", "", "", "", "", ""],
+        ["", "", "", "", "", ""],
+        ["", "", "", "", "", ""],
+        ["", "", "", "", "", ""],
+      ]);
+      setAttemptNumber({
+        attempt: 0,
+        inputPos: 0,
+      });
+      setWordSet(new Set());
+      setEndGame({
+        endGame: false,
+        guessedCorrectly: false,
+      });
+      setUsedLetters([]);
+      setCorrectWord("");
+      setGameStart(true);
+    }
+  };
+
   useEffect(() => {
     generateWordSet(genSelect).then((words) => {
       setWordSet(words.wordSet);
       setCorrectWord(words.currentWord.toUpperCase());
+      setGameStart(false);
     });
-  }, [genSelect]);
+  }, [genSelect, gameStart]);
 
   useEffect(() => {
     if (attemptNumber.attempt === 6) return;
@@ -108,6 +135,7 @@ function App() {
           endGame,
           genSelect,
           setGen,
+          restartGame,
         }}
       >
         <nav>
@@ -127,7 +155,19 @@ function App() {
           <span className="text-violet-400">{genSelect.toUpperCase()}</span>
         </div>
         <div className="my-4 font-sans">
-          {endGame.endGame ? <EndGame /> : <Keyboard />}
+          {endGame.endGame ? (
+            <div>
+              <EndGame />
+              <button
+                className="my-2 inline-flex w-[110px] bg-sky-900 justify-center rounded-md border border-gray-300  py-1 text-xs shadow-sm hover:bg-sky-800 focus:bg-sky-600 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:text-white"
+                onClick={restartGame}
+              >
+                Restart
+              </button>
+            </div>
+          ) : (
+            <Keyboard />
+          )}
         </div>
       </AppContext.Provider>
     </div>
