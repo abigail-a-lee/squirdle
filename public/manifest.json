@@ -1,6 +1,6 @@
 {
   "short_name": "Squirdle",
-  "name": "Pokémon wordle clone",
+  "name": "Pokémon-based wordle clone",
   "icons": [
     {
       "src": "favicon.ico",
